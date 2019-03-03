@@ -59,7 +59,6 @@ def validate(ds, check_tiled=True):
       ValidateCloudOptimizedGeoTIFFException: Unable to open the file or the
         file is not a Tiff.
     """
-
     if int(gdal.VersionInfo('VERSION_NUM')) < 2020000:
         raise ValidateCloudOptimizedGeoTIFFException(
             'GDAL 2.2 or above required')
@@ -186,23 +185,23 @@ def validate(ds, check_tiled=True):
     return errors, details
 
 
-def main():
+def main_validate(filename):
     """Return 0 in case of success, 1 for failure."""
 
-    i = 1
-    filename = None
-    quiet = False
-    while i < len(sys.argv):
-        if sys.argv[i] == '-q':
-            quiet = True
-        elif sys.argv[i][0] == '-':
-            return Usage()
-        elif filename is None:
-            filename = sys.argv[i]
-        else:
-            return Usage()
+    # i = 1
+    # filename = None
+    # quiet = False
+    # while i < len(sys.argv):
+    #     if sys.argv[i] == '-q':
+    #         quiet = True
+    #     elif sys.argv[i][0] == '-':
+    #         return Usage()
+    #     elif filename is None:
+    #         filename = sys.argv[i]
+    #     else:
+    #         return Usage()
 
-        i += 1
+    #     i += 1
 
     if filename is None:
         return Usage()
@@ -210,24 +209,24 @@ def main():
     try:
         errors, _ = validate(filename)
         if errors:
-            if not quiet:
-                print('%s is NOT a valid cloud optimized GeoTIFF.' % filename)
-                print('The following errors were found:')
-                for error in errors:
-                    print(' - ' + error)
+            # if not quiet:
+            print('%s is NOT a valid cloud optimized GeoTIFF.' % filename)
+            print('The following errors were found:')
+            for error in errors:
+                print(' - ' + error)
             ret = 1
         else:
             ret = 0
-            if not quiet:
-                print('%s is a valid cloud optimized GeoTIFF' % filename)
+            # if not quiet:
+            print('%s is a valid cloud optimized GeoTIFF' % filename)
     except ValidateCloudOptimizedGeoTIFFException as e:
-        if not quiet:
-            print('%s is NOT a valid cloud optimized GeoTIFF : %s' %
-                  (filename, str(e)))
+        # if not quiet:
+        print('%s is NOT a valid cloud optimized GeoTIFF : %s' %
+                (filename, str(e)))
         ret = 1
 
     return ret
 
 
-if __name__ == '__main__':
-    sys.exit(main())
+# if __name__ == '__main__':
+#     sys.exit(main())

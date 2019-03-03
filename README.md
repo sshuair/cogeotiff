@@ -1,6 +1,6 @@
 ## Cloud Optimized GeoTiff utility tools
 
-## in progress..
+## work in progress..
 
 ## Usage
 

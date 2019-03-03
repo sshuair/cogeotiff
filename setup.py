@@ -29,7 +29,7 @@ setup(
         'Programming Language :: Python :: 3',
         'Topic :: Multimedia :: Graphics :: Graphics Conversion',
         'Topic :: Scientific/Engineering :: GIS'],
-    keywords='GeoTiff COG',
+    keywords='GeoTiff COG GDAL',
     author='sshuair',
     author_email='sshuair@gmail.com',
     url='https://github.com/sshuair/cogeotiff',
@@ -38,9 +38,5 @@ setup(
     entry_points='''
         [console_scripts]
         cog=cogeotiff.cli.cli:entry_point
-
-        createcog=cogeotiff.cli.create:create_cog_command
-
     '''
-
 )
