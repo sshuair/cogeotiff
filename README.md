@@ -1,9 +1,13 @@
 ## Cloud Optimized GeoTiff utility tools
 
 
-## requirements
+## Requirements
 - click
 - gdal
+
+## Install
+pypi: `pip install cogeotiff`
+source code: `python setup.py install`
 
 ## Usage
 
