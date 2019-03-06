@@ -6,8 +6,8 @@
 - gdal
 
 ## Install
-pypi: `pip install cogeotiff`
-source code: `python setup.py install`
+- pypi: `pip install cogeotiff`
+- source code: `python setup.py install`
 
 ## Usage
 
