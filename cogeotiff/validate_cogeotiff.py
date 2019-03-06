@@ -185,7 +185,7 @@ def validate(ds, check_tiled=True):
     return errors, details
 
 
-def main_validate(filename):
+def validate_cog(filename):
     """Return 0 in case of success, 1 for failure."""
 
     # i = 1

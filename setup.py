@@ -3,7 +3,7 @@ from setuptools import setup
 
 # install requirements
 inst_reqs = [
-    'click', 'tqdm', 'fiona'
+    'click', 'gdal'
 ]
 
 # readme
@@ -25,7 +25,6 @@ setup(
         'Programming Language :: Cython',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 3',
         'Topic :: Multimedia :: Graphics :: Graphics Conversion',
         'Topic :: Scientific/Engineering :: GIS'],
