@@ -12,7 +12,7 @@ with open('README.md', encoding='utf-8') as f:
 
 setup(
     name='cogeotiff',
-    version = 0.01,
+    version = '0.1.1',
     description = u'Cloud Optimized GeoTiff utility tools.',
     long_description = readme,
     classifiers=[
@@ -21,8 +21,6 @@ setup(
         'Intended Audience :: Information Technology',
         'Intended Audience :: Science/Research',
         'License :: OSI Approved :: MIT License',
-        'Programming Language :: C',
-        'Programming Language :: Cython',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3',
@@ -32,7 +30,7 @@ setup(
     author='sshuair',
     author_email='sshuair@gmail.com',
     url='https://github.com/sshuair/cogeotiff',
-    packages = ['cogeotiff'],
+    packages = ['cogeotiff', 'cogeotiff.cli'],
     install_requires=inst_reqs,
     entry_points='''
         [console_scripts]

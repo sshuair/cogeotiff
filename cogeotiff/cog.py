@@ -48,7 +48,6 @@ def create_cog(
     out_profile = cog_profile.get(compress)
     out_profile.update({'nodata':nodata, 'block_size':block_size})
     out_profile = dict(out_profile).values()
-    print(out_profile)
     translate_command = ' '.join(['gdal_translate', ' '.join(out_profile), src_path, dst_path
         ])
     subprocess.run(translate_command, shell=True)
