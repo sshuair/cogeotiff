@@ -34,13 +34,13 @@ result = validate_cog(cog_path)
 Usage: cog create [OPTIONS] SRC_PATH DST_PATH
 
 Options:
-  --overview-resampling TEXT  resampling method for create pyramiddefault:
+  --overview-resampling TEXT  resampling method for create pyramid default:
                               nearest
   --overview-level INTEGER    levels to build
   --nodata INTEGER            Assign a specified nodata value to output bands.
                               default: 0
   --block-size INTEGER        tiled size, default: 512
-  --compress TEXT             compress method,default: raw
+  --compress TEXT             compress method: JPEG,RAW,DEFLATE,LZW,WEBP,ZSTD,PACKBITS,default: raw
   --help                      Show this message and exit.
 ```
 
