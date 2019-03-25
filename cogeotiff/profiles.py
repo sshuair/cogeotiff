@@ -129,9 +129,14 @@ class PACKBITSProfile(Profile):
 class COGProfiles(dict):
     def __init__(self):
         self.update({
-            'jpeg': JPEGProfile(),
-            'raw': RAWProfile(),
-            'deflate': DEFLATEProfile()
+            'JPEG': JPEGProfile(),
+            'RAW': RAWProfile(),
+            'DEFLATE': DEFLATEProfile(),
+            'LZW': LZWProfile(),
+            'WEBP': WEBPProfile(),
+            'ZSTD': ZSTDProfile(),
+            'PACKBITS': PACKBITSProfile()
+
         })
 
     def get(self, key):

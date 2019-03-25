@@ -6,12 +6,12 @@ from .utils import check_overview, get_max_overview
 
 
 def create_cog(
-    src_path, 
+    src_path,
     dst_path, 
-    overview_resampling='nearest', 
-    overview_level=None, 
+    overview_resampling='nearest',
+    overview_level=None,
     nodata=0,
-    block_size=512,
+    block_size=256,
     compress='raw',
     **kwargs):
     '''create cog file from a specific file(tiff img hdr...)
@@ -21,11 +21,11 @@ def create_cog(
         dst_path {string} -- target file path
     
     Keyword Arguments:
-        overview_resampling {str} -- resampling method for create pyramid (default: {'nearest'})
+        overview_resampling {str} -- resampling method for create pyramid (default: 'nearest')
         overview_level {int} -- levels to build (default: {None})
         nodata {float} -- Assign a specified nodata value to output bands (default: 0)
-        block_size {int} -- tiled size (default: {512})
-        compress {str} -- compress method (default: {'raw'})
+        block_size {int} -- tiled size (default: 256)
+        compress {str} -- compress method: JPEG,RAW,DEFLATE,LZW,WEBP,ZSTD,PACKBITS (default: 'raw')
     '''
     dataset = gdal.Open(src_path)
 
@@ -48,8 +48,7 @@ def create_cog(
     out_profile = cog_profile.get(compress)
     out_profile.update({'nodata':nodata, 'block_size':block_size})
     out_profile = dict(out_profile).values()
-    translate_command = ' '.join(['gdal_translate', ' '.join(out_profile), src_path, dst_path
-        ])
+    translate_command = ' '.join(['gdal_translate', ' '.join(out_profile), src_path, dst_path])
     subprocess.run(translate_command, shell=True)
 
     # remove the external ovr file
