@@ -12,7 +12,7 @@ with open('README.md', encoding='utf-8') as f:
 
 setup(
     name='cogeotiff',
-    version = '0.1.3',
+    version = '0.1.4',
     description = u'Cloud Optimized GeoTiff utility tools.',
     long_description = readme,
     classifiers=[

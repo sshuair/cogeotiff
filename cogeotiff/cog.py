@@ -12,7 +12,7 @@ def create_cog(
     overview_level=None,
     nodata=0,
     block_size=256,
-    compress='raw',
+    compress='RAW',
     **kwargs):
     '''create cog file from a specific file(tiff img hdr...)
     

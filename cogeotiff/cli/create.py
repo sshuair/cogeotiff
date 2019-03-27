@@ -25,8 +25,8 @@ from cogeotiff.cog import create_cog
              )
 @click.option('--compress', 
              type=str, 
-             default='raw',
-             help='compress method: JPEG,RAW,DEFLATE,LZW,WEBP,ZSTD,PACKBITS,default: raw')
+             default='RAW',
+             help='compress method: JPEG,RAW,DEFLATE,LZW,WEBP,ZSTD,PACKBITS,default: RAW')
 def create_cog_command(
     src_path,
     dst_path, 
