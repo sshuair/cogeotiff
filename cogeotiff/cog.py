@@ -25,7 +25,7 @@ def create_cog(
         overview_level {int} -- levels to build (default: {None})
         nodata {float} -- Assign a specified nodata value to output bands (default: 0)
         block_size {int} -- tiled size (default: 256)
-        compress {str} -- compress method: JPEG,RAW,DEFLATE,LZW,WEBP,ZSTD,PACKBITS (default: 'raw')
+        compress {str} -- compress method: JPEG,RAW,DEFLATE,LZW,WEBP,ZSTD,PACKBITS (default: 'RAW')
     '''
     dataset = gdal.Open(src_path)
 
@@ -38,7 +38,7 @@ def create_cog(
     # check overview extis or not, if overview exits, then skip create overview
     if not check_overview(dataset):
         print('++++creating overview++++')
-        overview_command = ' '.join(['gdaladdo', '-ro', '-r', overview_resampling, src_path, overview_list ])
+        overview_command = ' '.join(['gdaladdo', '--config COMPRESS={}'.format(compress), '-ro', '-r', overview_resampling, src_path, overview_list ])
         addo_result = subprocess.run(overview_command, shell=True, check=True)
     else:
         print('++++overview already exits, skip create overview++++')
