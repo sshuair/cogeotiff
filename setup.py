@@ -3,7 +3,7 @@ from setuptools import setup
 
 # install requirements
 inst_reqs = [
-    'click', 'gdal'
+    'click'
 ]
 
 # readme
