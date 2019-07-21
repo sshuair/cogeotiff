@@ -32,6 +32,8 @@ def create_cog(
     # overview level:
     if not overview_level:
         nlevel = get_max_overview(src_path)
+        if nlevel == 0:
+            nlevel = 1
     overview_list = [2 ** j for j in range(1, nlevel + 1)]
     overview_list = ' '.join([str(x) for x in overview_list])
     
