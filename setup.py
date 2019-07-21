@@ -12,15 +12,16 @@ with open('README.md', encoding='utf-8') as f:
 
 setup(
     name='cogeotiff',
-    version = '0.1.4',
+    version = '0.1.5',
     description = u'Cloud Optimized GeoTiff utility tools.',
     long_description = readme,
+    long_description_content_type = 'text/markdown',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
         'Intended Audience :: Information Technology',
         'Intended Audience :: Science/Research',
-        'License :: OSI Approved :: MIT License',
+        'License :: MIT License',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3',
