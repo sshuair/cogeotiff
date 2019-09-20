@@ -16,11 +16,11 @@ from cogeotiff.cog import create_cog
 @click.option('--nodata', 
              type=int, 
              default=None,
-             help='Assign a specified nodata value to output bands. default: 0'
+             help='Assign a specified nodata value to output bands. default: None'
              )
 @click.option('--block-size', 
              type=int, 
-             default=256,
+             default=512,
              help='tiled size, default: 512'
              )
 @click.option('--compress', 

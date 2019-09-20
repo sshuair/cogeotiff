@@ -42,7 +42,7 @@ class RAWProfile(Profile):
         'tiled': 'YES',
         'block_size': 256,
         'copy_src_overviews': True, 
-        'nodata': 0,
+        'nodata': None,
     }
 
 
@@ -52,7 +52,7 @@ class JPEGProfile(Profile):
         'tiled': True,
         'block_size': 256,
         'copy_src_overviews': True, 
-        'nodata': 0,
+        'nodata': None,
         'compress': 'JPEG',
         "photometric": "YCBCR",
     }
@@ -66,7 +66,7 @@ class WEBPProfile(Profile):
         "tiled": True,
         "block_size": 512,
         'copy_src_overviews': True, 
-        'nodata': 0,
+        'nodata': None,
         "compress": "WEBP",
     }
 
@@ -81,7 +81,7 @@ class ZSTDProfile(Profile):
         "tiled": True,
         "block_size": 512,
         'copy_src_overviews': True, 
-        'nodata': 0,
+        'nodata': None,
         'dtype': 'Byte',
         "compress": "ZSTD",
     }
@@ -95,7 +95,7 @@ class LZWProfile(Profile):
         "tiled": True,
         "block_size": 512,
         'copy_src_overviews': True, 
-        'nodata': 0,
+        'nodata': None,
         "compress": "LZW",
     }
 
@@ -108,7 +108,7 @@ class DEFLATEProfile(Profile):
         "tiled": True,
         "block_size": 512,
         'copy_src_overviews': True, 
-        'nodata': 0,
+        'nodata': None,
         "compress": "DEFLATE",
     }
 
@@ -121,7 +121,7 @@ class PACKBITSProfile(Profile):
         "tiled": True,
         "block_size": 512,
         'copy_src_overviews': True, 
-        'nodata': 0,
+        'nodata': None,
         "compress": "PACKBITS",
     }
 
